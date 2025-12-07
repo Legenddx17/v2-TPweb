@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="style.css">
     
     <style>
-        /* Esto hace que el cambio de color sea un "barrido" suave de 1.5 segundos */
+        /* Transiciones suaves para el modo demo */
         :root { transition: --primary 1.5s ease; }
         .accent, .accent-text, .btn.primary, .dot, .ring, .inner-circle, .card:hover {
             transition: all 1.5s ease;
@@ -37,7 +37,7 @@
 
     <header class="hero">
         <div class="hero-content">
-            <h1 class="glitch">PEPE <span class="accent-text" id="moodTitle">CHILL</span></h1>
+            <h1 class="glitch" data-text="PEPE">PEPE <span class="accent-text" id="moodTitle">CHILL</span></h1>
             <h2>INTELIGENCIA ADAPTATIVA</h2>
             <p>Titan Pepe monitorea tu servidor y adapta su comportamiento en tiempo real. Moderación, economía y multimedia en un solo núcleo.</p>
             
@@ -77,7 +77,7 @@
     </section>
 
     <footer>
-        <p>SYSTEM V2.0 // TITAN PROJECT 2025</p>
+        <p>TP v2</p>
     </footer>
 
     <script src="script.js"></script>
