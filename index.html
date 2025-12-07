@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Titan Pepe | v2</title>
+    <title>Titan Pepe | System Online</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,6 +12,15 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     
     <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Esto hace que el cambio de color sea un "barrido" suave de 1.5 segundos */
+        :root { transition: --primary 1.5s ease; }
+        .accent, .accent-text, .btn.primary, .dot, .ring, .inner-circle, .card:hover {
+            transition: all 1.5s ease;
+        }
+        .bg-glow { transition: background 1.5s ease; }
+    </style>
 </head>
 <body>
 
@@ -22,18 +31,18 @@
         <div class="logo">TITAN <span class="accent">PEPE</span></div>
         <div class="status-badge" id="statusBadge">
             <div class="dot"></div>
-            <span id="statusText">CONECTANDO...</span>
+            <span>ONLINE</span>
         </div>
     </nav>
 
     <header class="hero">
         <div class="hero-content">
-            <h1 class="glitch">TITAN <span class="accent-text">PEPE</span></h1>
-            <h2>NO ES UN SIMPLE BOT</h2>
-            <p>Moderación adaptativa. Conversión multimedia. Niveles dinámicos. Titan Pepe evoluciona según el ritmo cardíaco de tu servidor.</p>
+            <h1 class="glitch">SISTEMA <span class="accent-text" id="moodTitle">CHILL</span></h1>
+            <h2>INTELIGENCIA ADAPTATIVA</h2>
+            <p>Titan Pepe monitorea tu servidor y adapta su comportamiento en tiempo real. Moderación, economía y multimedia en un solo núcleo.</p>
             
             <div class="cta-group">
-                <a href="https://discord.com/oauth2/authorize?client_id=1445912449382617150&permissions=8&integration_type=0&scope=bot" class="btn primary">INVITAR BOT</a>
+                <a href="https://discord.com/oauth2/authorize?client_id=1445912449382617150&permissions=8&integration_type=0&scope=bot" target="_blank" class="btn primary">INVITAR AHORA</a>
                 <a href="#features" class="btn secondary">VER COMANDOS</a>
             </div>
         </div>
@@ -50,53 +59,28 @@
             
             <div class="stats">
                 <div class="stat-item">
-                    <span class="label">RED GLOBAL</span>
-                    <span class="value" id="activityVal">0%</span>
-                </div>
-                <div class="stat-item">
-                    <span class="label">ESTADO</span>
-                    <span class="value accent" id="moodVal">---</span>
+                    <span class="label">ACTIVIDAD ACTUAL</span>
+                    <span class="value accent" id="activityText">BAJA</span>
                 </div>
             </div>
         </div>
     </header>
 
     <section id="features" class="features">
-        <div class="section-title">COMANDOS<span class="accent">V2.0</span></div>
-        
+        <div class="section-title">ARSENAL <span class="accent">V2.0</span></div>
         <div class="grid">
-            <div class="card">
-                <i data-lucide="image" class="card-icon"></i>
-                <h3>Pixel Vision</h3>
-                <p>Convierte cualquier imagen en arte Retro/Pixel al instante con <code>/pixelate</code>.</p>
-            </div>
-            <div class="card">
-                <i data-lucide="mic" class="card-icon"></i>
-                <h3>Audio Converter</h3>
-                <p>Convierte notas de voz (OGG) y audios raros a MP3 universal con <code>/tomp3</code>.</p>
-            </div>
-            <div class="card">
-                <i data-lucide="shield" class="card-icon"></i>
-                <h3>Mood Engine</h3>
-                <p>El bot siente. Si el chat está rápido, entra en <b>HYPE MODE</b>. Si hay spam, activa <b>STRICT MODE</b>.</p>
-            </div>
-            <div class="card">
-                <i data-lucide="qr-code" class="card-icon"></i>
-                <h3>QR Generator</h3>
-                <p>Crea códigos QR instantáneos para compartir enlaces o textos con <code>/qrcode</code>.</p>
-            </div>
+            <div class="card"><i data-lucide="image" class="card-icon"></i><h3>Pixel Vision</h3><p>Arte retro instantáneo.</p></div>
+            <div class="card"><i data-lucide="mic" class="card-icon"></i><h3>Audio Converter</h3><p>Notas de voz a MP3.</p></div>
+            <div class="card"><i data-lucide="shield" class="card-icon"></i><h3>Mood Engine</h3><p>Moderación dinámica.</p></div>
+            <div class="card"><i data-lucide="qr-code" class="card-icon"></i><h3>QR Generator</h3><p>Enlaces rápidos.</p></div>
         </div>
     </section>
 
     <footer>
-        <p> V2.0 // TP 2025 // POWERED BY SUPABASE</p>
+        <p>SYSTEM V2.0 // TITAN PROJECT 2025</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="script.js"></script>
-    <script>
-        // Inicializar iconos
-        lucide.createIcons();
-    </script>
+    <script>lucide.createIcons();</script>
 </body>
 </html>
