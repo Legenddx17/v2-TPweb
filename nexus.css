@@ -1,0 +1,132 @@
+/* nexus.css - LA IDENTIDAD DEL SISTEMA */
+
+.nexus-section {
+    position: relative;
+    padding: 100px 10%;
+    margin-top: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: radial-gradient(circle at top, #0a0a0f 0%, #000000 100%);
+    overflow: hidden;
+}
+
+/* Título de la sección */
+.nexus-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    text-align: left;
+    margin-bottom: 60px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    border-left: 5px solid var(--primary); /* Usa la variable de color del script */
+    padding-left: 20px;
+}
+
+.nexus-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+/* TARJETAS GRANDES */
+.nexus-block {
+    flex: 1;
+    min-width: 350px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 50px;
+    position: relative;
+    backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+}
+
+/* Efecto Hover: Se ilumina el borde */
+.nexus-block:hover {
+    border-color: var(--primary);
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8);
+}
+
+/* Iconos y Cabecera */
+.block-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 20px;
+}
+
+.block-label {
+    font-family: 'Rajdhani', sans-serif;
+    color: var(--primary);
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+}
+
+.block-icon {
+    color: white;
+    opacity: 0.5;
+    width: 32px;
+    height: 32px;
+}
+
+/* Contenido */
+.nexus-block h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 15px;
+    line-height: 1;
+}
+
+.nexus-block p {
+    color: #888;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Botones / Enlaces especiales */
+.nexus-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border: 1px solid var(--primary);
+    transition: 0.3s;
+}
+
+.nexus-link:hover {
+    background: var(--primary);
+    color: black;
+}
+
+/* Decoración de fondo (Líneas técnicas) */
+.nexus-deco {
+    position: absolute;
+    top: 0; right: 0;
+    width: 100px; height: 100px;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(255, 255, 255, 0.03) 10px,
+        rgba(255, 255, 255, 0.03) 20px
+    );
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .nexus-title { font-size: 2rem; }
+    .nexus-section { padding: 80px 5%; }
+}
