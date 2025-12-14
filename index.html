@@ -3,105 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Titan Pepe | System Online</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
-    
-    <script src="https://unpkg.com/lucide@latest"></script>
-    
+    <title>Titan Pepe v2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="nexus.css">
-
-    <style>
-        /* Transiciones suaves para el modo demo */
-        :root { transition: --primary 1.5s ease; }
-        .accent, .accent-text, .btn.primary, .dot, .ring, .inner-circle, .card:hover {
-            transition: all 1.5s ease;
-        }
-        .bg-glow { transition: background 1.5s ease; }
-    </style>
 </head>
 <body>
 
-    <div class="bg-grid"></div>
-    <div class="bg-glow"></div>
+    <div class="screen-overlay"></div>
 
-    <nav>
-        <div class="logo">TITAN <span class="accent">PEPE</span></div>
-        <div class="status-badge" id="statusBadge">
-            <div class="dot"></div>
-            <span>ONLINE</span>
-        </div>
-    </nav>
-
-    <header class="hero">
-        <div class="hero-content">
-            <h1 class="glitch" data-text="PEPE">PEPE <span class="accent-text" id="moodTitle">CHILL</span></h1>
-            <h2>INTELIGENCIA ADAPTATIVA</h2>
-            <p>Titan Pepe monitorea tu servidor y adapta su comportamiento en tiempo real. Moderación, economía y multimedia en un solo núcleo.</p>
-            
-            <div class="cta-group">
-                <a href="https://discord.com/oauth2/authorize?client_id=1445912449382617150&permissions=8&integration_type=0&scope=bot" target="_blank" class="btn primary">INVITAR AHORA</a>
-                <a href="#features" class="btn secondary">VER COMANDOS</a>
-            </div>
-        </div>
+    <div class="game-container">
         
-        <div class="hero-visual">
-            <div class="pulse-circle">
-                <div class="inner-circle">
-                    <i data-lucide="zap" class="icon-large"></i>
-                </div>
-                <div class="ring r1"></div>
-                <div class="ring r2"></div>
-                <div class="ring r3"></div>
+        <div class="ui-header">
+            <div class="char-info">
+                <span class="name">TITAN PEPE</span>
+                <span class="lv">LV 2.0</span>
             </div>
-            
-            <div class="stats">
-                <div class="stat-item">
-                    <span class="label">ACTIVIDAD ACTUAL</span>
-                    <span class="value accent" id="activityText">BAJA</span>
+            <div class="hp-container">
+                <span class="label">UPTIME</span>
+                <div class="hp-bar-border">
+                    <div class="hp-bar-fill"></div>
                 </div>
+                <span class="hp-text">100 / 100</span>
             </div>
         </div>
-    </header>
 
-    <section id="features" class="features">
-        <div class="section-title">ARSENAL <span class="accent">V2.0</span></div>
-        <div class="grid">
-            <div class="card"><i data-lucide="image" class="card-icon"></i><h3>Pixel Vision</h3><p>Arte retro instantáneo.</p></div>
-            <div class="card"><i data-lucide="mic" class="card-icon"></i><h3>Audio Converter</h3><p>Notas de voz a MP3.</p></div>
-            <div class="card"><i data-lucide="shield" class="card-icon"></i><h3>Mood Engine</h3><p>Moderación dinámica.</p></div>
-            <div class="card"><i data-lucide="qr-code" class="card-icon"></i><h3>QR Generator</h3><p>Enlaces rápidos.</p></div>
+        <div class="battle-stage">
+            <div class="sprite-container">
+                <div class="pixel-sprite">🐸</div>
+            </div>
         </div>
-    </section>
-<section class="nexus-section" style="padding: 40px 10%; margin-top: 0; border: none; background: transparent;">
-        <div class="grid" style="grid-template-columns: repeat(2, 1fr); gap: 20px;">
+
+        <div class="dialogue-box">
+            <div class="dialogue-text" id="typewriter-text"></div>
+        </div>
+
+        <div class="action-menu">
+            <button class="rpg-btn" data-desc="* Generación de tarjetas estéticas 'Now Playing' y diseño visual neón.">
+                <span class="soul-cursor">❤</span> VISUALES
+            </button>
             
-            <a href="hq.html" class="nexus-block" style="text-decoration: none; padding: 30px; display: flex; align-items: center; justify-content: space-between;">
-                <div>
-                    <h3 style="font-family: 'Orbitron'; color: white; margin-bottom: 5px;">LATINOS RANDOM</h3>
-                    <span style="color: var(--primary); font-size: 0.8rem; letter-spacing: 2px;">BASE DE OPERACIONES</span>
-                </div>
-                <i data-lucide="external-link" style="color: white;"></i>
+            <button class="rpg-btn" data-desc="* Tarjetas de rango renderizadas en imagen (Canvas) y sistema de XP.">
+                <span class="soul-cursor">❤</span> NIVELES
+            </button>
+            
+            <button class="rpg-btn" data-desc="* Monitor en tiempo real de latencia (Ping), Uptime y estado.">
+                <span class="soul-cursor">❤</span> SISTEMA
+            </button>
+            
+            <a href="https://discord.com/oauth2/authorize?client_id=1445912449382617150&permissions=8&integration_type=0&scope=bot" target="_blank" class="rpg-btn special" data-desc="*Te llenas de determinación (Añadir a Titan Pepe a tu servidor)">
+                <span class="soul-cursor">❤</span> INVITAR
             </a>
-
-            <a href="dev.html" class="nexus-block" style="text-decoration: none; padding: 30px; display: flex; align-items: center; justify-content: space-between;">
-                <div>
-                    <h3 style="font-family: 'Orbitron'; color: white; margin-bottom: 5px;">LEGENDDX17</h3>
-                    <span style="color: var(--primary); font-size: 0.8rem; letter-spacing: 2px;">THE ARCHITECT</span>
-                </div>
-                <i data-lucide="code" style="color: white;"></i>
-            </a>
-
         </div>
-    </section>
-    <footer>
-        <p>TP v2</p>
-    </footer>
+
+    </div>
 
     <script src="script.js"></script>
-    <script>lucide.createIcons();</script>
 </body>
 </html>
